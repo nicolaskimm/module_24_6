@@ -46,3 +46,26 @@ it('should call onScoreUpdate', () => {
 
   expect(mockedOnScoreUpdate).toBeCalledWith(1, 3);
 })
+
+it('should remove the right Player', () => {
+  const players = [
+    {
+      name: 'Basia',
+      score: 0,
+    },
+    {
+      name: 'Adam',
+      score: 3
+    }
+  ]
+
+  const mockedOnPlayersListChange = jest.fn();
+  const playerComponent = shallow(<PlayersList players={players} onPlayersListChange = {mockedOnPlayersListChange} />);
+
+  const lastPlayer = playerComponent.find(Player).last();
+  const onPlayerRemove = lastPlayer.prop('onPlayerRemove');
+
+  onPlayerRemove();
+
+  expect(mockedOnPlayersListChange).toBeCalled();
+})
