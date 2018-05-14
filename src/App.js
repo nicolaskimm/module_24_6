@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import PlayersList from './components/PlayersList/PlayersList';
 import AddPlayer from './components/AddPlayer/AddPlayer';
-import { AgGridReact } from 'ag-grid-react';
-import 'ag-grid/dist/styles/ag-grid.css';
-import 'ag-grid/dist/styles/ag-theme-balham.css';
 
 class App extends Component {
   constructor() {
@@ -24,6 +21,18 @@ class App extends Component {
     }
   }
 
+  scoreSort = () => {
+    let playersArray = this.state.players;
+
+    playersArray.sort((a, b) => {
+      return b.score - a.score;
+    })
+
+    this.setState({
+      players: playersArray
+    })
+  }
+
   onScoreUpdate = (playerIndex, scoreChange) => {
     this.setState({
       players: this.state.players.map((player, index) => {
@@ -31,7 +40,7 @@ class App extends Component {
           return { ...player, score: player.score + scoreChange };
         }
         return player;
-      })
+      }),
     })
   }
 
@@ -58,7 +67,7 @@ class App extends Component {
       <div className='App'>
         <h1 className='header'> Fantastic scorekeeper! </h1>
         <AddPlayer onPlayerAdd={this.onPlayerAdd} />
-        <PlayersList players={this.state.players} onScoreUpdate={this.onScoreUpdate} onPlayersListChange={this.onPlayersListChange} />
+        <PlayersList players={this.state.players} onScoreUpdate={this.onScoreUpdate} onPlayersListChange={this.onPlayersListChange} onScoreSort={this.scoreSort} />
       </div>
     );
   }
