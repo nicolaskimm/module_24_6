@@ -1,0 +1,32 @@
+.Player {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.Player_button {
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: 2px solid #d6bf3b;
+  color: white;
+  font-weight: 530;
+  margin: 0 3px;
+}
+
+.Player_name {
+  color: #d6bf3b;
+  margin-right: 80px;
+  font-weight: 520;
+}
+
+.Player_score {
+  margin-right: 80px;
+  color: white;
+  font-size: 50px;
+  border-bottom: 2px solid #d6bf3b;
+}

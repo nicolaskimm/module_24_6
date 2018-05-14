@@ -1,5 +1,5 @@
 import React from 'react';
-import './AddPlayer.css'
+import './AddPoints.css'
 
 const AddPlayer = (props) => {
   let input;
@@ -16,5 +16,3 @@ const AddPlayer = (props) => {
     </form>
   )
 }
-
-export default AddPlayer;

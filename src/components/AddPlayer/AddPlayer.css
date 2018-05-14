@@ -1,0 +1,19 @@
+.AddPlayer {
+  margin: 10px 10px;
+}
+
+.AddPlayer_submit{
+  background-color: #d6bf3b;
+  border: 2px solid white;
+  margin-left: 6px;
+  height: 30px;
+  width: 150px;
+  font-weight: bold;
+}
+
+.AddPlayer_input {
+  border: 2px solid #d6bf3b;
+  margin-right: 6px;
+  height: 25px;
+  width: 250px;
+}

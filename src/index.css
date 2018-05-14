@@ -1,5 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  background-image: url('https://images.pexels.com/photos/8892/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=650&w=940');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
