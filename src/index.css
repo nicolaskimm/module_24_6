@@ -3,9 +3,9 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  background-image: url('https://images.pexels.com/photos/8892/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=650&w=940');
+  background-image: url('https://images.pexels.com/photos/1006115/pexels-photo-1006115.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+  background-blend-mode: lighten;
   background-repeat: no-repeat;
   background-size: cover;
-
   height: 100vh;
 }
